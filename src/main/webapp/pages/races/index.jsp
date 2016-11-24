@@ -28,5 +28,6 @@
                 </c:forEach>
             </tbody>
         </table>
+        <button class="createRaceBtn" onclick='window.location="createRace"'>Create Race</button>
     </body>
 </html>
