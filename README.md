@@ -6,6 +6,12 @@ Inspired by Emerson's famous race game!
 
 ## Getting Started
 
+Migrate the database:
+
+```
+  ./gradlew flywayMigrate
+```
+
 Run unit, integration, and acceptance tests:
 
 ```
@@ -22,5 +28,5 @@ To generate project files for IntelliJ IDEA:
 
 ```
   ./gradlew idea
-``
+```
 
