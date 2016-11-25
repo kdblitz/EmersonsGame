@@ -9,12 +9,9 @@ import java.io.IOException;
 
 @WebServlet(urlPatterns = "/createRace")
 public class CreateRaceController extends HttpServlet {
-    public CreateRaceController() {
-
-    }
-
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.getRequestDispatcher("pages/createRace/index.jsp").forward(req, resp);
+//        req.getRequestDispatcher("pages/createRace/index.jsp").forward(req, resp);
+        req.getRequestDispatcher("pages/races/index.jsp").forward(req, resp);
     }
 }

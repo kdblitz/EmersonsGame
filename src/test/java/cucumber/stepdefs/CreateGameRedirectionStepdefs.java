@@ -2,6 +2,10 @@ package cucumber.stepdefs;
 
 import cucumber.api.java8.En;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
+
+import java.util.concurrent.TimeUnit;
 
 import static cucumber.stepdefs.support.Url.url;
 import static cucumber.stepdefs.support.WebDrivers.getDriver;
@@ -18,10 +22,11 @@ public class CreateGameRedirectionStepdefs implements En {
         });
 
         When("^I try create a new game$", () -> {
-            getDriver().findElement(By.className("createRaceBtn")).click();
+            getDriver().findElement(By.id("createRaceBtn")).click();
         });
 
         Then("^I must be redirected to the create game page$", () -> {
+            getDriver().manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
             assertThat(getDriver().getCurrentUrl(), endsWith("/createRace"));
         });
     }

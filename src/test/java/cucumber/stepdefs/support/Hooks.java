@@ -13,13 +13,13 @@ public class Hooks {
     @Before
     public void beforeScenario() throws Exception {
         getNewDatabaseTester();
-        getNewDriver().get(url());
+//        getNewDriver().get(url());
     }
 
     @After
     public void afterScenario() throws Exception {
-        getDriver().close();
-        getDriver().quit();
+//        getDriver().close();
+//        getDriver().quit();
         getDatabaseTester().onTearDown();
     }
 }
